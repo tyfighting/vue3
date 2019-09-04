@@ -1,7 +1,9 @@
 {
   "defaultSeverity": "warning",
   "extends": [
-    "tslint:recommended"
+    "tslint:recommended",
+    "tslint-config-prettier",
+    "tslint-plugin-prettier"
   ],
   "linterOptions": {
     "exclude": [
@@ -9,12 +11,16 @@
     ]
   },
   "rules": {
-    "no-console": false,
     "indent": [true, "spaces", 2],
     "interface-name": false,
     "no-consecutive-blank-lines": false,
     "object-literal-sort-keys": false,
     "ordered-imports": false,
-    "quotemark": [true, "single"]
+    "quotemark": [true, "single"],
+    "prettier": ["true", ".prettierrc"],
+    "no-console": false,
+    "no-angle-bracket-type-assertion": false,
+    "member-access": false,
+    "no-debugger":false
   }
 }
