@@ -12,6 +12,9 @@ const defaultState: any = {
 const getters: any = {
   getUserState(state: any) {
     return state;
+  },
+  isLogin(state: any) {
+    return !!state.company.id;
   }
 };
 const mutations: any = {
@@ -21,9 +24,9 @@ const mutations: any = {
   }
 };
 const actions: any = {
-  async login(state:any,payLoad:any){
-    let data:any=await login(payLoad.username,payLoad.password);
-    state.commit('setUserState',data.result);
+  async login(state: any, payLoad: any) {
+    let data: any = await login(payLoad.username, payLoad.password);
+    state.commit('setUserState', data.result);
   }
 };
 
