@@ -1,5 +1,20 @@
 <template>
-  <div class="about">
-    <h1>This is an about page</h1>
+  <div class="son">
+    <input v-model="uname" @input="changeVal" />
   </div>
 </template>
+
+<script>
+export default {
+  name: "son",
+  props: ["uname"],
+  data() {
+    return {};
+  },
+  methods: {
+    changeval() {
+      this.$emit("changeval", this.uname);
+    }
+  }
+};
+</script>
